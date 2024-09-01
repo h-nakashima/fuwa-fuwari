@@ -1,0 +1,36 @@
+---
+import path from 'path'
+import { getCollection } from 'astro:content'
+import I18nKey from '../../i18n/i18nKey'
+import { i18n } from '../../i18n/translation'
+import { getDir } from '../../utils/url-utils'
+import ImageWrapper from '../misc/ImageWrapper.astro'
+import WidgetLayout from './WidgetLayout.astro'
+
+const allPosts = await getCollection('posts')
+const recentPosts = allPosts
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+  .slice(0, 5)
+
+const { class: className, style } = Astro.props
+---
+
+<WidgetLayout name={i18n(I18nKey.recentPosts)} id="recent-posts" class={className} style={style}>
+  <ul class="space-y-2">
+    {recentPosts.map((post) => (
+      <li class="py-1">
+        <a href={`/posts/${post.slug}/`} class="flex items-center space-x-2 hover:text-primary transition-colors">
+          {post.data.image && (
+            <ImageWrapper
+              src={post.data.image}
+              basePath={path.join("content/posts/", getDir(post.id))}
+              alt={post.data.title}
+              class="w-[80px] h-[80px] rounded-md overflow-hidden flex-shrink-0"
+            />
+          )}
+          <span class="text-sm line-clamp-2">{post.data.title}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</WidgetLayout>
