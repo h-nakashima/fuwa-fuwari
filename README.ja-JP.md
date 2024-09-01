@@ -2,7 +2,7 @@
 
 [Astro](https://astro.build) で構築された静的ブログテンプレート。h-nakashimaによるカスタマイズ版。
 
-[**🖥️ライブデモ (Vercel)（オリジナルバージョン）**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+[**🖥️ライブデモ (Cloudflare Pages)**](https://fuwari-template.pages.dev)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 [**📦オリジナルバージョン**](https://github.com/saicaca/fuwari)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 
 > README バージョン：`2024-09-01` 

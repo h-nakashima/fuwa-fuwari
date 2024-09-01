@@ -2,7 +2,7 @@
 
 A static blog template built with [Astro](https://astro.build). Customized version by h-nakashima.
 
-[**🖥️ Live Demo (Vercel)(Original Version)**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+[**🖥️ Live Demo (Cloudflare Pages)**](https://fuwari-template.pages.dev)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 [**📦Original Version**](https://github.com/saicaca/fuwari)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 [**🌏 中文**](https://github.com/saicaca/fuwari/blob/main/README.zh-CN.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 [**🌏 日本語**](https://github.com/saicaca/fuwari/blob/main/README.ja-JP.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
