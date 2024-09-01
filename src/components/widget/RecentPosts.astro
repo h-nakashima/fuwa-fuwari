@@ -20,7 +20,7 @@ const { class: className, style } = Astro.props
     {recentPosts.map((post, index) => (
       <li>
         <div class="border-t border-gray-200 dark:border-gray-700 mb-4"></div>
-        <a href={`/posts/${post.slug}/`} class="flex items-center space-x-2 hover:text-primary transition-colors">
+        <a href={`/posts/${post.slug}/`} class="link-lg flex items-center space-x-2 hover:text-primary transition-colors">
           {post.data.image && (
             <ImageWrapper
               src={post.data.image}
@@ -29,7 +29,7 @@ const { class: className, style } = Astro.props
               class="w-[80px] h-[80px] rounded-md overflow-hidden flex-shrink-0"
             />
           )}
-          <span class="text-base line-clamp-3">{post.data.title}</span>
+          <span class="text-base line-clamp-3 text-75">{post.data.title}</span>
         </a>
       </li>
     ))}
