@@ -22,7 +22,7 @@ const hasBannerLink = !!siteConfig.banner.credit.url
 
 <Layout title={title} banner={banner} description={description} lang={lang}>
 <slot slot="head" name="head"></slot>
-<div class="max-w-[var(--page-width)] min-h-screen grid grid-cols-[auto_17.5rem] grid-rows-[auto_auto_1fr_auto] lg:grid-rows-[auto_1fr_auto]
+<div class="max-w-[var(--page-width)] min-h-screen grid grid-cols-[auto_17.5auto] grid-rows-[auto_auto_1fr_auto] lg:grid-rows-[auto_1fr_auto]
     mx-auto gap-4 relative px-0 md:px-4"
 >
     <div id="top-row" class="relative transition-all duration-700 col-span-2 grid-rows-1" class:list={[""]}>
@@ -42,16 +42,16 @@ const hasBannerLink = !!siteConfig.banner.credit.url
         </a>}
 
     </div>
-    <SideBar class="row-start-3 row-end-4 col-span-1 lg:row-start-2 lg:row-end-3 lg:col-start-2 lg:col-end-3 lg:max-w-[17.5rem] onload-animation"></SideBar>
 
-    <div id="content-wrapper" class="row-start-2 row-end-3 col-span-1 lg:col-start-1 lg:col-end-2 overflow-hidden onload-animation">
+    <div id="content-wrapper" class="row-start-2 row-end-3 col-span-2 lg:row-start-2 lg:row-end-3 lg:col-span-1 overflow-hidden onload-animation">
         <!-- the overflow-hidden here prevent long text break the layout-->
         <!-- make id different from windows.swup global property -->
         <main id="swup-container" class="transition-swup-fade">
             <slot></slot>
         </main>
-
     </div>
+
+    <SideBar class="row-start-3 row-end-4 col-span-2 lg:row-start-2 lg:row-end-3 lg:col-span-1 lg:max-w-[17.5rem] lg:col-start-2 lg:col-end-3 onload-animation"></SideBar>
 
     <div id="footer" class="grid-rows-3 col-span-2 mt-4 onload-animation">
         <Footer></Footer>
