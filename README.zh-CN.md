@@ -1,3 +1,5 @@
+> **注意**: 此中文版README文件目前未能及时更新维护。最新信息请参考英文版README文件。
+
 # 🍥Fuwari
 
 基于 [Astro](https://astro.build) 开发的静态博客模板。

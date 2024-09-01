@@ -1,16 +1,16 @@
-# 🍥Fuwari
+# 🍥Fuwari customized by h-nakashima
 
-[Astro](https://astro.build) で構築された静的ブログテンプレート
+[Astro](https://astro.build) で構築された静的ブログテンプレート。h-nakashimaによるカスタマイズ版。
 
-[**🖥️ライブデモ (Vercel)**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**📦旧 Hexo バージョン**](https://github.com/saicaca/hexo-theme-vivia)
+[**🖥️ライブデモ (Vercel)（オリジナルバージョン）**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+[**📦オリジナルバージョン**](https://github.com/saicaca/fuwari)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 
-> README バージョン：`2024-04-07` 
+> README バージョン：`2024-09-01` 
 
-![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
+![Preview Image](./sample_home.png)
 
 ## ✨ 特徴
-
+### オリジナルリポジトリ
 - [x] [Astro](https://astro.build) 及び [Tailwind CSS](https://tailwindcss.com) で構築
 - [x] スムーズなアニメーションとページ遷移
 - [x] ライト/ダークテーマ対応
@@ -19,6 +19,14 @@
 - [ ] コメント機能
 - [x] 検索機能
 - [ ] 目次
+
+### 本リポジトリの追加機能
+- [x] サイドバーを右側へ移動
+- [x] サイドバーへ最近の投稿ウィジェットを追加
+- [ ] Google Analytics 対応
+- [ ] ページごとの閲覧数カウンター
+- [ ] サイドバーへアクセスランキングを追加
+- [ ] Google Adsense 対応
 
 ## 🚀 使用方法
 
@@ -50,6 +58,7 @@ draft: false
 | Command                             | Action                                      |
 |:------------------------------------|:--------------------------------------------|
 | `pnpm install` AND `pnpm add sharp` | 依存関係のインストール                                 |
+| `pnpm clean`                        | ビルド出力とキャッシュを削除                             |
 | `pnpm dev`                          | `localhost:4321` で開発用ローカルサーバーを起動            |
 | `pnpm build`                        | `./dist/` にビルド内容を出力                         |
 | `pnpm preview`                      | デプロイ前の内容をローカルでプレビュー                         |

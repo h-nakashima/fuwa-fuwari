@@ -1,19 +1,19 @@
-# 🍥Fuwari
+# 🍥Fuwari customized by h-nakashima
 
-A static blog template built with [Astro](https://astro.build).
+A static blog template built with [Astro](https://astro.build). Customized version by h-nakashima.
 
-[**🖥️ Live Demo (Vercel)**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**📦 Old Hexo Version**](https://github.com/saicaca/hexo-theme-vivia)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+[**🖥️ Live Demo (Vercel)(Original Version)**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+[**📦Original Version**](https://github.com/saicaca/fuwari)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 [**🌏 中文**](https://github.com/saicaca/fuwari/blob/main/README.zh-CN.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 [**🌏 日本語**](https://github.com/saicaca/fuwari/blob/main/README.ja-JP.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 [**🌏 한국어**](https://github.com/saicaca/fuwari/blob/main/README.ko.md)
 
-> README version: `2024-04-07`
+> README version: `2024-09-01`
 
-![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
+![Preview Image](./sample_home.png)
 
 ## ✨ Features
-
+### Original Repository
 - [x] Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com)
 - [x] Smooth animations and page transitions
 - [x] Light / dark mode
@@ -22,6 +22,14 @@ A static blog template built with [Astro](https://astro.build).
 - [ ] Comments
 - [x] Search
 - [ ] TOC
+
+### Additional Features in This Repository
+- [x] Moved sidebar to the right
+- [x] Added recent posts widget to sidebar
+- [ ] Google Analytics support
+- [ ] Page view counter
+- [ ] Added access ranking to sidebar
+- [ ] Google Adsense support
 
 ## 🚀 How to Use
 
@@ -53,6 +61,7 @@ All commands are run from the root of the project, from a terminal:
 | Command                             | Action                                           |
 |:------------------------------------|:-------------------------------------------------|
 | `pnpm install` AND `pnpm add sharp` | Installs dependencies                            |
+| `pnpm clean`                        | Delete build output and cache                    |
 | `pnpm dev`                          | Starts local dev server at `localhost:4321`      |
 | `pnpm build`                        | Build your production site to `./dist/`          |
 | `pnpm preview`                      | Preview your build locally, before deploying     |
