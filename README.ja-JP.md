@@ -1,4 +1,4 @@
-# 🍥Fuwari customized by h-nakashima
+# 🍥fuwa-fuwari (fuwari customized by h-nakashima)
 
 [Astro](https://astro.build) で構築された静的ブログテンプレート。h-nakashimaによるカスタマイズ版。
 

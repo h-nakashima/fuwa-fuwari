@@ -1,4 +1,4 @@
-# 🍥Fuwari customized by h-nakashima
+# 🍥fuwa-fuwari (fuwari customized by h-nakashima)
 
 A static blog template built with [Astro](https://astro.build). Customized version by h-nakashima.
 
