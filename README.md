@@ -26,7 +26,7 @@ A static blog template built with [Astro](https://astro.build). Customized versi
 ### Additional Features in This Repository
 - [x] Moved sidebar to the right
 - [x] Added recent posts widget to sidebar
-- [ ] Google Analytics support
+- [x] Google Analytics support
 - [ ] Page view counter
 - [ ] Added access ranking to sidebar
 - [ ] Google Adsense support
