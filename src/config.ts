@@ -30,7 +30,11 @@ export const siteConfig: SiteConfig = {
     //   theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
     //   sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
     // }
-  ]
+  ],
+  googleAnalytics: {
+    enabled: true, // Whether to use Google Analytics
+    trackingId: import.meta.env.VITE_GOOGLE_ANALYTICS_ID || '', // Get the tracking ID from the environment variable
+  }
 }
 
 export const navBarConfig: NavBarConfig = {

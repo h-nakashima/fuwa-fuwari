@@ -22,6 +22,11 @@ export type SiteConfig = {
   }
 
   favicon: Favicon[]
+
+  googleAnalytics: {
+    enabled: boolean
+    trackingId: string
+  }
 }
 
 export type Favicon = {

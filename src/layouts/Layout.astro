@@ -58,6 +58,9 @@ if (!lang) {
   lang = `${siteConfig.lang}`
 }
 const siteLang = lang.replace('_', '-')
+
+const enableGoogleAnalytics = siteConfig.googleAnalytics.enabled
+const googleAnalyticsTrackingId = siteConfig.googleAnalytics.trackingId
 ---
 
 <!DOCTYPE html>
@@ -115,6 +118,17 @@ const siteLang = lang.replace('_', '-')
 		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
 
 		<style define:vars={{ configHue }}></style>  <!-- defines global css variables. This will be applied to <html> <body> and some other elements idk why -->
+
+		{enableGoogleAnalytics && (
+			<!-- Google Analytics -->
+			<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsTrackingId}`}></script>
+			<script is:inline define:vars={{ trackingId: googleAnalyticsTrackingId }}>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+			  gtag('config', trackingId);
+			</script>
+		)}
 
 	</head>
 	<body class=" min-h-screen transition " class:list={[{"is-home": isHomePage, "enable-banner": enableBanner}]}>
