@@ -30,12 +30,94 @@
 
 ## 🚀 使用方法
 
-1. [テンプレート](https://github.com/saicaca/fuwari/generate)から新しいリポジトリを作成するかCloneをします。
+1. [テンプレート](https://github.com/h-nakashima/fuwa-fuwari/generate)から新しいリポジトリを作成するかCloneをします。
 2. ブログをローカルで編集するには、リポジトリをクローンした後、`pnpm install` と `pnpm add sharp` を実行して依存関係をインストールします。  
    - [pnpm](https://pnpm.io) がインストールされていない場合は `npm install -g pnpm` で導入可能です。
 3. `src/config.ts` ファイルを編集する事でブログを自分好みにカスタマイズ出来ます。
 4. `pnpm new-post <filename>` で新しい記事を作成し、`src/content/posts/`.フォルダ内で編集します。
 5. 作成したブログをVercel、Netlify、GitHub Pagesなどにデプロイするには[ガイド](https://docs.astro.build/ja/guides/deploy/)に従って下さい。加えて、別途デプロイを行う前に `astro.config.mjs` を編集してサイト構成を変更する必要があります。
+
+### テンプレートの更新をクローンしたリポジトリに反映するには
+#### 初回更新時
+[テンプレート](https://github.com/h-nakashima/fuwa-fuwari/generate)の更新をクローンしたリポジトリに取り込み、`feature/template-sync` ブランチでPRを作成する方法を示します。
+
+1. **新しいブランチを作成**
+   テンプレートの変更を適用するための `feature/template-sync` ブランチをクローンしたリポジトリ内で作成します。
+   ```bash
+   git checkout -b feature/template-sync
+   ```
+
+2. **テンプレートリポジトリをリモートとして追加**
+   テンプレートリポジトリ `git@github.com:h-nakashima/fuwa-fuwari.git` をリモートとして追加します。
+   ```bash
+   git remote add template git@github.com:h-nakashima/fuwa-fuwari.git
+   ```
+
+3. **テンプレートリポジトリの変更をフェッチ**
+   テンプレートリポジトリの最新の変更を取得します。
+   ```bash
+   git fetch template
+   ```
+
+4. **テンプレートリポジトリの変更をクローンしたリポジトリにマージ**
+   テンプレートリポジトリの `main` ブランチの最新の変更を `feature/template-sync` ブランチにマージします。
+   ```bash
+   git merge template/main --allow-unrelated-histories
+   ```
+
+   コンフリクトが発生した場合は、手動で解決し、マージを完了させます。
+
+5. **変更をコミット**
+   コンフリクトを解消した後、必要に応じて変更を確認し、コミットします。
+   ```bash
+   git commit -m "Merged updates from template repository"
+   ```
+
+6. **ブランチをリモートにプッシュ**
+   `feature/template-sync` ブランチをプッシュします。
+   ```bash
+   git push origin feature/template-sync
+   ```
+
+7. **GitHubでプルリクエストを作成**
+   GitHub上で、クローンしたリポジトリの `feature/template-sync` ブランチに対してプルリクエストを作成します。プルリクエストのタイトルや説明を適切に記入し、テンプレートリポジトリからの変更内容が反映されるようにします。
+
+#### 2回目以降の更新時
+
+1. **ブランチ切り替え**
+   テンプレートの変更を適用するための `feature/template-sync` に切り替えます。
+   ```bash
+   git checkout feature/template-sync
+   ```
+
+2. **テンプレートリポジトリの変更をフェッチ**
+   テンプレートリポジトリの最新の変更を取得します。
+   ```bash
+   git fetch template
+   ```
+
+4. **テンプレートリポジトリの変更をクローンしたリポジトリにマージ**
+   テンプレートリポジトリの `main` ブランチの最新の変更を `feature/template-sync` ブランチにマージします。
+   ```bash
+   git merge template/main
+   ```
+
+   コンフリクトが発生した場合は、手動で解決し、マージを完了させます。
+
+5. **変更をコミット**
+   コンフリクトを解消した後、必要に応じて変更を確認し、コミットします。
+   ```bash
+   git commit -m "Merged updates from template repository"
+   ```
+
+6. **ブランチをリモートにプッシュ**
+   `feature/template-sync` ブランチをプッシュします。
+   ```bash
+   git push
+   ```
+
+7. **GitHubでプルリクエストを作成**
+   GitHub上で、クローンしたリポジトリの `feature/template-sync` ブランチに対してプルリクエストを作成します。プルリクエストのタイトルや説明を適切に記入し、テンプレートリポジトリからの変更内容がクローンしたリポジトリに反映されるようにします。
 
 ## ⚙️ 記事のフロントマター
 
