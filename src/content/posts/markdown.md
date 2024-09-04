@@ -7,6 +7,8 @@ category: Examples
 draft: false
 ---
 
+## Contents
+
 # An h1 header
 
 Paragraphs are separated by a blank line.
