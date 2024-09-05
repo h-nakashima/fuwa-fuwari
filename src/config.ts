@@ -3,6 +3,7 @@ import type {
   NavBarConfig,
   ProfileConfig,
   SiteConfig,
+  ShareButtonConfig
 } from './types/config'
 import { LinkPreset } from './types/config'
 
@@ -80,3 +81,36 @@ export const licenseConfig: LicenseConfig = {
   name: 'CC BY-NC-SA 4.0',
   url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 }
+
+export const shareButtonsConfig: ShareButtonConfig[] = [
+  {
+    name: 'Hatena',
+    icon: 'simple-icons:hatenabookmark',
+    url: (encodedUrl) => `//b.hatena.ne.jp/entry/${encodedUrl}`,
+    openInNewWindow: false,
+  },
+  {
+    name: 'Twitter',
+    icon: 'fa6-brands:twitter',
+    url: (encodedUrl, encodedTitle) => `//twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+    openInNewWindow: true,
+  },
+  {
+    name: 'Facebook',
+    icon: 'fa6-brands:facebook',
+    url: (encodedUrl, encodedTitle) => `//www.facebook.com/sharer/sharer.php?u=${encodedUrl}&t=${encodedTitle}`,
+    openInNewWindow: true,
+  },
+  {
+    name: 'Pocket',
+    icon: 'fa6-brands:get-pocket',
+    url: (encodedUrl) => `//getpocket.com/edit?url=${encodedUrl}`,
+    openInNewWindow: true,
+  },
+  {
+    name: 'Line',
+    icon: 'fa6-brands:line',
+    url: (encodedUrl) => `https://line.me/R/msg/text/?${encodedUrl}`,
+    openInNewWindow: true,
+  },
+];

@@ -87,3 +87,10 @@ export type BlogPostData = {
   nextTitle?: string
   nextSlug?: string
 }
+
+export type ShareButtonConfig = {
+  name: string
+  icon: string
+  url: (encodedUrl: string, encodedTitle?: string) => string
+  openInNewWindow: boolean
+}

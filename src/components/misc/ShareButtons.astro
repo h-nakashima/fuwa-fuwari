@@ -3,24 +3,21 @@ const { title, url } = Astro.props
 const encodedUrl = encodeURIComponent(url)
 const encodedTitle = encodeURIComponent(title)
 import { Icon } from 'astro-icon/components'
+import { shareButtonsConfig } from '../../config'
 ---
 
 <div class="share-buttons justify-end">
-    <a class="hatena" href={`//b.hatena.ne.jp/entry/${encodedUrl}`} target="_blank" rel="nofollow noopener">
-        <Icon name="simple-icons:hatenabookmark" class="h-6 w-6 text-[var(--primary)]" />
-    </a>
-    <a class="twitter" href={`//twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`} onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=550,width=550');return false;" target="_blank" rel="nofollow noopener">
-        <Icon name="fa6-brands:twitter" class="h-6 w-6 text-[var(--primary)]" />
-    </a>
-    <a class="facebook" href={`//www.facebook.com/sharer/sharer.php?u=${encodedUrl}&t=${encodedTitle}`} onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=550,width=550');return false;" target="_blank" rel="nofollow noopener">
-        <Icon name="fa6-brands:facebook" class="h-6 w-6 text-[var(--primary)]" />
-    </a>
-    <a class="pocket" href={`//getpocket.com/edit?url=${encodedUrl}`} onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=550,width=550');return false;" target="_blank" rel="nofollow noopener">
-        <Icon name="fa6-brands:get-pocket" class="h-6 w-6 text-[var(--primary)]" />
-    </a>
-    <a class="line" href={`https://line.me/R/msg/text/?${encodedUrl}`} onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=550,width=550');return false;" target="_blank" rel="nofollow noopener">
-        <Icon name="fa6-brands:line" class="h-6 w-6 text-[var(--primary)]" />
-    </a>
+    {shareButtonsConfig.map(button => (
+        <a
+            class={button.name.toLowerCase()}
+            href={button.url(encodedUrl, encodedTitle)}
+            target="_blank"
+            rel="nofollow noopener"
+            onclick={button.openInNewWindow ? "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=550,width=550');return false;" : ""}
+        >
+            <Icon name={button.icon} class="h-6 w-6 text-[var(--primary)]" />
+        </a>
+    ))}
 </div>
 
 <style>
