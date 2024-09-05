@@ -56,6 +56,7 @@ export default defineConfig({
       include: {
         "material-symbols": ["*"],
         "fa6-brands": ["*"],
+        "simple-icons": ["*"],
         "fa6-regular": ["*"],
         "fa6-solid": ["*"],
       },
